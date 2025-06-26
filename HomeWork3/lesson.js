@@ -202,10 +202,51 @@
 // --------------------------//
 // --------------------------//
 
-let arr = ['a', 'b', 'c', 'd', 'f'];
+// let arr = ['a', 'b', 'c', 'd', 'f'];
 
 // arr.splice(2, 2); //arr.splice(с чого/якого почати видаляти, скільки треба видалити)
 
 // console.log(arr);
 
-console.log(arr.slice(1, 3));
+// console.log(arr.slice(1, 3)); //arr.slice(с чого/якого почати додавати/повертати, скільки треба додати/повернути)
+
+// let a = [1, 2, 3];
+
+// console.log(arr.concat(a)); //додає все в один массив
+
+// console.log(arr.indexOf('c', 1));
+// console.log(arr.lastIndexOf('c'));
+
+// console.log(arr.includes("c"));
+
+// const fruts = [
+//   { id: 0, name: 'Apple' },
+//   { id: 1, name: 'Tomat' },
+//   { id: 2, name: 'Cherry' },
+//   { id: 3, name: 'Orange' },
+// ];
+
+//find
+// console.log(fruts.find(item => item.id === 1));
+
+//filter
+// console.log(fruts.filter(item => item.id < 2 ));
+
+//map
+// let result = fruts.map(item => item.name.length);
+// console.log(result);
+
+//split
+// let names = 'Olya, Yulya, Anna, Petya';
+// let arr = names.split(', ');
+// // console.log(arr);
+// let newString = arr.join(', ');
+// console.log(newString);
+
+// let arr = [1, 2, 3, 4, 5];
+// let red = arr.reduce((summ, item) => summ + item);
+// console.log(red); //зробити сумму чисел ( додавали кожне наступне число до попередньої суми )
+
+// let arr = [23, 45, 30];
+// let summ = arr.reduce((summ, item) => summ + item) / arr.length;
+// console.log(summ);  //знайшли середне число
