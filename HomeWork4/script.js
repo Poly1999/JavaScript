@@ -68,13 +68,3 @@
 //   () => alert('Ви погодились.'),
 //   () => alert('Ви скасували виконання.')
 // );
-
-const colors = ['red', 'green'];
-
-colors.unshift('blue');
-colors.push('yellow');
-
-colors.shift();
-colors.pop();
-
-console.log(colors);
