@@ -69,20 +69,12 @@
 //   () => alert('Ви скасували виконання.')
 // );
 
-const subscribe = (userName, onSuccess, onCancel) => {
-  if (confirm('Do you want to subscribe?')) {
-    onSuccess(userName);
-  } else {
-    onCancel(userName);
-  }
-};
+const colors = ['red', 'green'];
 
-subscribe(
-  'Polina',
-  name => {
-    alert('Thank you, ' + name + ', for subscribing!');
-  },
-  name => {
-    alert("It's sad, " + name + '. Maybe next time!');
-  }
-);
+colors.unshift('blue');
+colors.push('yellow');
+
+colors.shift();
+colors.pop();
+
+console.log(colors);
