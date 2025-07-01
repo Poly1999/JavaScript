@@ -5,7 +5,7 @@
 //Функції можна уявити як чорну скриньку, вони отримують щось на вході (дані), і віддають щось на виході (результат виконання коду всередині функції).
 //Функції є інструментом для структурування великих програм, зменшення повторень та ізолювання коду.
 
-//function declirion
+// function declirion
 
 // function showMessage(name, city) {
 //   console.log('Hello, my name is ' + name + " I'm from " + city);
@@ -15,7 +15,7 @@
 // showMessage('Olya', 'Lviv');
 // showMessage('Anton', 'Sumy');
 
-//function expration
+// function expration
 
 // const userName = 'Anton';
 
@@ -64,6 +64,10 @@
 
 //аргументи
 
+// arguments — це вбудований псевдомасив, який є у всіх звичайних функціях
+// Він містить усі передані значення
+// Але arguments не працює в стрілкових функціях =>
+
 // const addName = function () {
 //   const arg = Array.from(arguments);
 //   console.log(arguments);
@@ -74,6 +78,10 @@
 
 //rest
 
+// ...arg — це називається rest-параметр
+// Він збирає всі передані аргументи в масив
+// Це сучасна альтернатива arguments
+
 // const addName = function (...arg) {
 //   console.log(arg);
 // };
@@ -83,6 +91,14 @@
 // addName(1, 3, 5, 85, 69);
 
 //callback
+
+// ask — головна функція
+// Вона приймає:
+// question — рядок
+// yes — функція, яку треба викликати, якщо відповідь "ОК"
+// no — функція, якщо натиснули "Скасувати"
+// Це називається callback: ми передаємо функцію в іншу функцію
+// Це дуже часто використовується в JS, особливо з подіями та асинхронним кодом.
 
 // function ask(question, yes, no) {
 //   if (confirm(question)) {
@@ -178,13 +194,13 @@
 //   console.log(numberRef.value);
 // });
 
-const addNumber = number => {
-  let sum = Number(number) + 10;
-  return console.log(sum);
-};
+// const addNumber = number => {
+//   let sum = Number(number) + 10;
+//   return console.log(sum);
+// };
 
-const numberRef = document.querySelector('input[name="number"]');
+// const numberRef = document.querySelector('input[name="number"]');
 
-const buttonRef = document.querySelector('button');
+// const buttonRef = document.querySelector('button');
 
-buttonRef.addEventListener('click', () => addNumber(numberRef.value));
+// buttonRef.addEventListener('click', () => addNumber(numberRef.value));

@@ -26,7 +26,7 @@
 //  -- 3 --
 // Замініть цикл "for" на "while"
 // for (let i = 0; i < 5; i++) {
-//     console.lpg( `цифра ${i}!` );
+//     console.log( `цифра ${i}!` );
 //   }
 
 // let i = 0;
