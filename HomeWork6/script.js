@@ -6,54 +6,34 @@
 // створити три різних юзери
 // вивести данні
 
-class Product {
-  constructor(name, price, quantity) {
+class Abonent {
+  constructor(name, phone) {
     this.name = name;
-    this.price = price;
-    this.quantity = quantity;
+    this._phone = phone;
+  }
+  set phone(number) {
+    if (typeof number === 'string' && number.length >= 7) {
+      this._phone = number;
+    } else {
+      console.log('Невірний номер телефону');
+    }
   }
 
-  getTotalPrice() {
-    return this.price * this.quantity;
+  get info() {
+    return `Абонент: ${this.name}, номер: ${this._phone}`;
   }
 }
 
-class Order {
-  constructor(orderNumber) {
-    this.products = [];
-    this.orderNumber = orderNumber;
-  }
+const user1 = new Abonent('Anton', '0671231233');
+const user2 = new Abonent('Polina', '0503304589');
+const user3 = new Abonent('Mark', '0663459876');
 
-  addProduct(product) {
-    this.products.push(product);
-  }
+console.log(user1.info);
+console.log(user2.info);
+console.log(user3.info);
 
-  getOrderTotal() {
-    let total = 0;
-    for (let product of this.products) {
-      total += product.getTotalPrice();
-    }
-    return total;
-  }
+user1.phone = '067000';
+console.log(user1.info);
 
-  printSummary() {
-    console.log(`Order #${this.orderNumber}:`);
-    for (let product of this.products) {
-      console.log(
-        `${product.name} — $${product.price} x ${
-          product.quantity
-        } = $${product.getTotalPrice()}`
-      );
-    }
-    console.log('Total: $' + this.getOrderTotal());
-  }
-}
-
-const apple = new Product('Apple', 2, 5); // $10
-const banana = new Product('Banana', 1, 10); // $10
-
-const order1 = new Order(101);
-order1.addProduct(apple);
-order1.addProduct(banana);
-
-order1.printSummary();
+user2.phone = '0985670978';
+console.log(user2.info);
