@@ -88,3 +88,21 @@
 .tree-item.open > .tree-children {
   display: block;
 }
+
+/*  */
+
+.faq-answer {
+  display: none;
+}
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/*  */
+
+.section-content {
+  display: none;
+}
+.section-item.open .section-content {
+  display: block;
+}

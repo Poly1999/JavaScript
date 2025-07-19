@@ -10,7 +10,7 @@
 // </body>
 // </html>
 
-const element = document.querySelector('[data-widget-name]');
-const value = element.dataset.widgetName;
+// const element = document.querySelector('[data-widget-name]');
+// const value = element.dataset.widgetName;
 
-console.log(value);
+// console.log(value);
